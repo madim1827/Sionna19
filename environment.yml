@@ -1,12 +1,12 @@
-name: pytorch-env
-
+name: tensorflow-env
 channels:
-  - pytorch
-  - nvidia
+  - nvidia  # NVIDIA channel for CUDA
   - conda-forge
   - defaults
-
 dependencies:
+  - python=3.10  # Change to 3.10 or 3.11 if needed
+  - pip
+  - tensorflow=2.15
   - accelerate
   - datasets
   - gh
@@ -17,17 +17,11 @@ dependencies:
   - jupyterlab-git
   - jupyterlab-nvdashboard
   - jupyterlab-lsp
-  - pip
-  - pip:
-    - -r requirements.txt
   - pyarrow
-  - python
   - python-dotenv
   - python-language-server
-  - pytorch
-  - pytorch-lightning
   - tensorboard
-  - torchmetrics
   - transformers
   - wandb
-  
+  - pip:
+    - -r requirements.txt
